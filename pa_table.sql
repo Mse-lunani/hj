@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 06, 2024 at 06:42 PM
--- Server version: 8.0.36
--- PHP Version: 8.1.27
+-- Generation Time: Mar 06, 2024 at 07:39 PM
+-- Server version: 5.7.44-cll-lve
+-- PHP Version: 8.1.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `vesencom_sales`
+-- Database: `hayahafr_hayah`
 --
 
 -- --------------------------------------------------------
@@ -41,7 +41,8 @@ CREATE TABLE `pa` (
   `InvoiceNumber` varchar(255) DEFAULT NULL,
   `ThirdPartyTransID` varchar(255) DEFAULT NULL,
   `OrgAccountBalance` varchar(255) DEFAULT NULL,
-  `id` int NOT NULL
+  `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -62,7 +63,7 @@ ALTER TABLE `pa`
 -- AUTO_INCREMENT for table `pa`
 --
 ALTER TABLE `pa`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
