@@ -24,7 +24,7 @@ try {
   foreach($response2 as $key=>$item){
       $response2[$key] = mysqli_real_escape_string($conn,$item);
   }
-  $response2['date_create'] = date("Y-m-d H:i:s");
+  $response2['date_created'] = date("Y-m-d H:i:s");
 
   build_sql_insert("pa",$response2);
   fwrite($write, "\n\nresponse after curl request of $url: ".json_encode($res)."\n\n");
